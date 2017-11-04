@@ -1,0 +1,33 @@
+'.source.python':
+    'Function':
+        prefix: 'def'
+        body: '''
+                def ${1:foo}(${2:arg}):
+                    """
+                    ${3:Docstring for ${1:foo}}
+                    """
+                    ${4:pass}
+                '''
+    'Wrapper Function':
+        prefix: 'defw'
+        body: '''
+                def ${1:foo}(func):
+                    """
+                    ${2:Docstring for ${1:foo}}
+                    """
+                    @wraps(func)
+                    def ${1:foo}_wrapper(*args, **kwargs):
+                        """
+                        Wrapper for ${1:foo}
+                        """
+                        ${3:return func(*args, **kwargs)}
+
+                    # Return wrapper
+                    return ${1:foo}_wrapper
+                '''
+    'Open File':
+        prefix: 'open'
+        body: '''
+                with open(${1:\'filename.txt\'}, ${2:\'r\'}):
+                    ${3:pass}
+                '''

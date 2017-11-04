@@ -1,0 +1,158 @@
+'.source.python':
+    'Class':
+        prefix: 'class'
+        body: '''
+                class ${1:MyClass}:
+                    """
+                    ${2:Docstring for ${1:MyClass}}
+                    """
+                    ${3:pass}
+                '''
+    'Class Extends':
+        prefix: 'classe'
+        body: '''
+                class ${1:MyClass}(${2:object}):
+                    """
+                    ${3:Docstring for ${1:MyClass}}
+                    """
+                    ${4:pass}
+                '''
+    'Method':
+        prefix: 'defs'
+        body: '''
+                def ${1:foo}(self, ${2:arg}):
+                    """
+                    ${3:Docstring for ${1:foo}}
+                    """
+                    ${4:pass}
+                '''
+    'Property':
+        prefix: 'prop'
+        body: '''
+                @property
+                def ${1:foo}(self):
+                    """
+                    ${2:Docstring for ${1:foo} property}
+                    """
+                    ${3:pass}
+                '''
+    'Property with Setter':
+        prefix: 'props'
+        body: '''
+                @property
+                def ${1:foo}(self):
+                    """
+                    ${2:Docstring for ${1:foo} property}
+                    """
+                    ${2:pass}
+                @${1:foo}.setter
+                def ${1:foo}(self, value):
+                    """
+                    ${2:Docstring for ${1:foo} property}
+                    """
+                    ${3:pass}
+                '''
+    'Classmethod':
+        prefix: 'defc'
+        body: '''
+                @classmethod
+                def ${1:foo}(cls${2:, arg}):
+                    """
+                    ${3:Docstring for ${1:foo}}
+                    """
+                    ${4:pass}
+                '''
+    'Staticmethod':
+        prefix: 'deft'
+        body: '''
+                @staticmethod
+                def ${1:foo}(${2:arg}):
+                    """
+                    ${3:Docstring for ${1:foo}}
+                    """
+                    ${4:pass}
+                '''
+    'Init Method':
+        prefix: 'minit'
+        body: '''
+                def __init__(self${1:, arg}):
+                    """
+                    ${2:Initializes instance}
+                    """
+                    ${3:pass}
+                '''
+    'Repr Method':
+        prefix: 'mrepr'
+        body: '''
+                def __repr__(self):
+                    """
+                    ${1:Detailed string representation of instance}
+                    """
+                    ${2:pass}
+                '''
+    'Str Method':
+        prefix: 'mstr'
+        body: '''
+                def __str__(self):
+                    """
+                    ${1:String representation of instance}
+                    """
+                    ${2:pass}
+                '''
+    'Descriptor Methods':
+        prefix: 'mdesc'
+        body: '''
+                def __get__(self, instance, owner=None):
+                    """
+                    ${1:Get value of descriptor in instance}
+                    """
+                    ${2:pass}
+
+                def __set__(self, instance, value):
+                    """
+                    ${3:Set value of descriptor in instance}
+                    """
+                    ${4:pass}
+
+                def __del__(self, instance, owner=None):
+                    """
+                    ${5:Del value of descriptor in instance}
+                    """
+                    ${6:pass}
+                '''
+    'Context Methods':
+        prefix: 'mcntx'
+        body: '''
+                def __enter__(self):
+                    """
+                    ${1:Enters the context of the object}
+                    """
+                    ${2:return self}
+
+                def __exit__(self, ext_type, ext_value, ext_tb):
+                    """
+                    ${3:Exits the context of the object}
+                    """
+                    ${4:pass}
+                '''
+    'Iterator Methods':
+        prefix: 'miter'
+        body: '''
+                def __iter__(self):
+                    """
+                    ${1:Returns the iterator}
+                    """
+                    return self
+
+                def next(self):
+                    """
+                    ${2:Returns the next value in the sequence}
+                    """
+                    ${3:pass}
+
+                def __next__(self):
+                    """
+                    Alias of next
+                    """
+                    return self.next()
+                '''
