@@ -1,7 +1,7 @@
 {
   "name": "better-python-snippets",
   "version": "0.1.0",
-  "description": "Python snippets, better and more convenient than the standard",
+  "description": "Python snippets, better and more convenient than the standard (currently only for python3)",
   "keywords": [
     "python",
     "snippets"
