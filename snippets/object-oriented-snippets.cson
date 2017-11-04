@@ -99,6 +99,15 @@
                     """
                     ${2:pass}
                 '''
+    'Call Method':
+        prefix: 'mcall'
+        body: '''
+                def __call__(self, *args, **kwargs):
+                    """
+                    ${1:Calls the object}
+                    """
+                    ${2:pass}
+                '''
     'Descriptor Methods':
         prefix: 'mdesc'
         body: '''
