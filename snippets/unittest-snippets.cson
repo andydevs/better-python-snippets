@@ -1,0 +1,28 @@
+'.source.python':
+    'Unit Test Case':
+        prefix: 'utest'
+        body: '''
+                class ${1:MyTest}Test(unittest.TestCase):
+                    """
+                    Docstring for ${1:MyTest}Test
+                    """
+                    pass
+                '''
+    'Setup Method':
+        prefix: 'usetup':
+        body: '''
+                def setUp(self):
+                    """
+                    Sets up test case
+                    """
+                    pass
+                '''
+    'Test Method':
+        prefix: 'defu'
+        body: '''
+                def test_${1:foo}(self):
+                    """
+                    Tests ${1:foo} method
+                    """
+                    pass
+                '''
