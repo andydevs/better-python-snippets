@@ -9,7 +9,7 @@
                     pass
                 '''
     'Setup Method':
-        prefix: 'usetup':
+        prefix: 'usetup'
         body: '''
                 def setUp(self):
                     """
