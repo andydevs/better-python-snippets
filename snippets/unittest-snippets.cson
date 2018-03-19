@@ -1,4 +1,4 @@
-'.source.python':
+'.source.py':
     'Unit Test Case':
         prefix: 'utest'
         body: '''
