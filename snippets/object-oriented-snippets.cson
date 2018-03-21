@@ -1,4 +1,4 @@
-'.source.py':
+'.source.python':
     'Class':
         prefix: 'class'
         body: '''

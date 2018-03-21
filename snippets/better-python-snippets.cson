@@ -1,4 +1,4 @@
-'.source.py':
+'.source.python':
     'Function':
         prefix: 'def'
         body: '''
