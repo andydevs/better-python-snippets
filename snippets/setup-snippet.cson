@@ -1,0 +1,15 @@
+'.source.python':
+    'Setup Function':
+        prefix: 'setup'
+        body: '''
+            from distutils.core import setup
+
+            # Setup function
+            setup(name='${1:my-project}',
+                  version='${2:0.1}',
+                  description='${3:description of project}',
+                  author='${4:Joe Schmoe}',
+                  author_email='${5:joe@schmoes.goes}',
+                  homepage='${6:http://github.com/joe/my-project}',
+                  packages=[${7:'myPackage'}])
+            '''
